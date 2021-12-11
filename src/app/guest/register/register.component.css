@@ -1,3 +1,10 @@
+:host{
+  height: 100vh;
+  display: block;
+  background-color: #ad7c58;
+  border: 1px solid #ad7c58;
+}
+
 .custom-card {
   width: 350px;
   max-width: 100%;

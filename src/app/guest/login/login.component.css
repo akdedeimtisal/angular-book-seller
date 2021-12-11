@@ -1,0 +1,17 @@
+:host{
+  height: 100vh;
+  display: block;
+  background-color: #ad7c58;
+  border: 1px solid #ad7c58;
+}
+
+.custom-card {
+  width: 350px;
+  max-width: 100%;
+  background-color: #eee;
+}
+
+.user-icon {
+  font-size: 100px;
+  color: #50A057;
+}
