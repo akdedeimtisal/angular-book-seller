@@ -1,33 +1,25 @@
-import {Component, Output, EventEmitter, Input} from '@angular/core';
-import {Book} from "../../models/book.model";
-import {BookService} from "../../services/book.service";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-declare var $: any;
+import { BookComponent } from './book.component';
 
-@Component({
-  selector: 'app-book',
-  templateUrl: './book.component.html',
-  styleUrls: ['./book.component.css']
-})
-export class BookComponent {
+describe('BookComponent', () => {
+  let component: BookComponent;
+  let fixture: ComponentFixture<BookComponent>;
 
-  errorMessage: string = "";
-
-  @Input() book: Book = new Book();
-  @Output() save = new EventEmitter<any>();
-  constructor(private bookService: BookService) { }
-
-  saveBook() {
-    this.bookService.saveBook(this.book).subscribe(data => {
-      this.save.emit(data);
-      $('#bookModal').modal('hide');
-    }, err => {
-      this.errorMessage = 'Unexpected error occurred.';
-      console.log(err);
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ BookComponent ]
     })
-  }
+      .compileComponents();
+  });
 
-  showBookModal() {
-    $('#bookModal').modal('show');
-  }
-}
+  beforeEach(() => {
+    fixture = TestBed.createComponent(BookComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

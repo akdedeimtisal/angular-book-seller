@@ -46,7 +46,7 @@ export class AdminComponent implements OnInit {
     this.bookService.deleteBook(item).subscribe(data => {
       this.bookList.splice(ind, 1);
     }, err => {
-      this.errorMessage = 'Unexpected error occngurred.';
+      this.errorMessage = 'Unexpected error occurred.';
       console.log(err);
     })
   }
