@@ -1,5 +1,7 @@
 # AngularBookSeller
 
+Project Link: https://sha-book-seller-ui-angular.herokuapp.com/home Backend Link: https://github.com/akdedeimtisal/spring-boot-book-seller
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
 ## Development server
